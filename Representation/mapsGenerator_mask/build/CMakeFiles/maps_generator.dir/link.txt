@@ -1,0 +1,1 @@
+g++  -std=c++0x -Wall -pthread -DSCWRL4_ENERGY -O3  -rdynamic CMakeFiles/maps_generator.dir/src/engine.cpp.o CMakeFiles/maps_generator.dir/src/main.cpp.o  -o maps_generator libs/proteins/libproteins.a 

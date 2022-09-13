@@ -1,0 +1,6 @@
+/home/mohseni/myThesis/GitLab/myThesis_generatemaskedcubes/ProtPartDisc/python_scripts/mapsGenerator_mask/build/CMakeFiles/rebuild_cache.dir
+/home/mohseni/myThesis/GitLab/myThesis_generatemaskedcubes/ProtPartDisc/python_scripts/mapsGenerator_mask/build/CMakeFiles/maps_generator.dir
+/home/mohseni/myThesis/GitLab/myThesis_generatemaskedcubes/ProtPartDisc/python_scripts/mapsGenerator_mask/build/CMakeFiles/edit_cache.dir
+/home/mohseni/myThesis/GitLab/myThesis_generatemaskedcubes/ProtPartDisc/python_scripts/mapsGenerator_mask/build/libs/proteins/CMakeFiles/rebuild_cache.dir
+/home/mohseni/myThesis/GitLab/myThesis_generatemaskedcubes/ProtPartDisc/python_scripts/mapsGenerator_mask/build/libs/proteins/CMakeFiles/proteins.dir
+/home/mohseni/myThesis/GitLab/myThesis_generatemaskedcubes/ProtPartDisc/python_scripts/mapsGenerator_mask/build/libs/proteins/CMakeFiles/edit_cache.dir

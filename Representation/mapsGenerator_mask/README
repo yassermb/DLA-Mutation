@@ -1,0 +1,25 @@
+# Install http://sourceforge.net/p/matio/ with zlib and HDF-5 to MAT output possibility
+# Don't forget set export LD_LIBRARY_PATH=/usr/local/lib/:$LD_LIBRARY_PATH or smth else for libmatio.so.2
+
+rm data/ALL.bbdep.rotamers.lib.formatted
+unzip data/ALL.bbdep.rotamers.lib.formatted.zip -d data
+rm -r build
+mkdir build && cd build
+cmake ..
+make
+cd ../
+
+# get scwrl test set PDBs
+cd data/scwrl4_test_set
+wget -i scwrl4_test_set_list
+
+# generate mat files with energies
+cd ../../build
+for file in ../data/scwrl4_test_set/*.pdb;
+  do
+    echo ${file#../data/scwrl4_test_set/}...
+    ./Rotamers --mode energy -i $file -m ${file%.pdb} -r ../data/ALL.bbdep.rotamers.lib;
+    if [ $? -ne 0 ];
+      then break;
+    fi;
+  done

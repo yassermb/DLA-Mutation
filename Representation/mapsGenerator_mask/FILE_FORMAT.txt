@@ -1,0 +1,26 @@
+for SH coefficients in oriented frames please run it as follows,
+maps_generator --mode sh -p 3 -i test.pdb -o test.txt
+
+
+
+FILE FORMAT RESIDUE MAPS
+    1 *
+        HEADER_SIZE * 4
+            |   4 BYTES HEADER_SIZE  (7)
+            |   4 BYTES MAGIC_NUMBER (7919)
+            |   4 BYTES NUMBER_ATOM_TYPES (169)
+            |   4 BYTES GRID_SIZE_X (24)
+            |   4 BYTES GRID_SIZE_Y (24)
+            |   4 BYTES GRID_SIZE_Z (24)
+            |   4 BYTES META_DATA_SIZE (4)
+            |   4 BYTES NB_MAPS (??)
+            |   ADDITIONNAL INFO (TO BE DEFINED)
+    NB_MAPS *
+        GRID_SIZE_X * GRID_SIZE_Y * GRID_SIZE_Z * NUMBER_ATOM_TYPES *
+            1
+                |   1 BYTE  VOXEL_VALUE 
+        META_DATA_SIZE
+            |   4 BYTES RESIDUE_SEQUENCE_NUMBER
+            |   4 BYTES RESIDUE_CODE
+            |   4 BYTES TARGET_SCORE (CURRENTLY CAD-SCORE)
+            |   ADDITIONNAL DATA (TO BE DEFINED)
