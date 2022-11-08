@@ -66,10 +66,13 @@ Example
     - Masking a sphere of radius 5A randomly centered on an atom of the central residue. This is the default masking. The ssDLA model is trained by this masking procedure.
     - Masking a sphere of radius 3A randomly centered on an atom of the central residue. 
     - Masking only the side-chain the central residue.
-    - Masking the whole central residue.  
+    - Masking the whole central residue. 
+    - No masking at all. 
     
 ![](Images/mask1.png?raw=true "mask1")
 ![](Images/mask2.png?raw=true "mask2")
+
+- Run ```Representation/python generate_cubes_interface.py```.
 
 The output will be directory 'map_dir' with the following structure:
 
@@ -85,6 +88,38 @@ Each output represents interface of a complex and contains a set of local enviro
 
 An atomic density map is a 4 dimensional tensor: a voxelized 3D grid with a size of ```24*24*24```. Each voxel encodes some characteristics of the protein atoms. Namely, the first 167 dimensions correspond to the
 atom types that can be found in amino acids (without the hydrogen). This dimension can be reduced to 4 element symbols (C,N,O,S) by running ```python generate_cubes_reduce_channels_multiproc.py``` (ATTENTION: This code overwrites the existing files). Dimension reduction must be applied in order to use models of BM5 as well as the general model.
+
+#### Prediction of the masked residue
+
+From directory 'Test' run ```python test.py```
+It processes all the target complexes and their conformations and produces csv file 'predictions_SCR'. Each row of the output file belongs to a conformation and it has 9 columns separated by 'tab':
+
+Name of target complex and the conformation (`Conf`) <br>
+Fold Id (`Fold`) <br>
+Score of each residue (`Scores`) <br>
+Region (SCR) of each residue (`Regions`) <br>
+Global averaged score of the interface (`Score`) <br>
+Processing time (`Time`) <br>
+Class of the conformation (`Class`, 0:incorrect, 1: near-native) <br>
+Partner (`RecLig`) <br>
+Residue number (`ResNumber`; according to PDB) <br>
+
+One can associate the Residues' numbers, regions, scores, and partner to evaluate the interface on a subset of interfacial residues.
+
+
+Alternatively ....
+
+
+
+<p align="center">
+    <img src="Images/aa_logo.svg.png" width=600>
+</p>
+
+
+
+
+
+
 
 ### Deep learning framework
 
