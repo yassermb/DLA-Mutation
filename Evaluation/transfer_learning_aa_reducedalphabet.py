@@ -82,8 +82,6 @@ def get_model(input_shape, input_shape_aux):
 
 
 input_data = 'intermediate_backrub_nomask_200.csv'
-#input_data = 'intermediate_xray_skempi_wt_mask_sphere5_randomcenter_200.csv'
-
 
 
 output_confusionmatrix_svg = 'tf_confusionmatrix_aareducedalphabet_classificaiton_' + input_data.replace('.csv','.svg') 

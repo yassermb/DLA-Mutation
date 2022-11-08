@@ -92,15 +92,10 @@ def get_model(input_shape):
     """
 
     X_in = Input(shape=input_shape)
-    #aux_input = Input(shape=input_shape_aux)
     
     H = Dense(20, use_bias=True, activation='elu', kernel_initializer='he_uniform', kernel_regularizer=l2(1e-3), kernel_constraint=max_norm(4), bias_constraint=max_norm(4))(X_in)
-    #H = Dense(30, use_bias=True, activation='elu', kernel_initializer='he_uniform', kernel_regularizer=l2(1e-3), kernel_constraint=max_norm(4), bias_constraint=max_norm(4))(H)
-    #H = Dense(10, use_bias=True, activation='elu', kernel_initializer='he_uniform', kernel_regularizer=l2(1e-3), kernel_constraint=max_norm(4), bias_constraint=max_norm(4))(H)
-    #H = Concatenate()([H, aux_input])
     Y = Dense(len(label_classes), activation='softmax')(H)
 
-    #_model = Model(inputs=[X_in, aux_input], outputs=Y)
     _model = Model(inputs=[X_in], outputs=Y)
     _model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.00001))
     _model.summary()
@@ -108,8 +103,7 @@ def get_model(input_shape):
     return _model
 
 
-input_data = 'intermediate_xray_skempi_wt_nomask_200.csv'
-#input_data = 'intermediate_xray_skempi_wt_mask_sphere5_randomcenter_200.csv'
+input_data = 'intermediate_xray_wt_nomask_200.csv'
 
 
 

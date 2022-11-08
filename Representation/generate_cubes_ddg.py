@@ -89,52 +89,11 @@ def save_pdb_interface(pdbfile, map_name, interface):
 
 def mapcomplex(wt_pdb, mut_pdb, protein_complex, mutate_complex, ddg, model_ind, mut_name, interaction_region, complex_type, experimental_method):    
     try:
-        #name = protein_complex + '--' + mutate_complex + '--' + str(model_ind)
         name = mut_name + '--' + str(model_ind)
-        #Attention: here the R/L feature isn't really meaningful! So we don't use it!
-        """
-        p1 = parsePDB(wt_pdb).select('protein').select("chain " + ' '.join(protein_complex.split('_')[1]))
-        p2 = parsePDB(wt_pdb).select('protein').select("chain " + ' '.join(protein_complex.split('_')[2]))
-        
-        
-        writePDB(name+'_complex_p1.pdb', p1.toAtomGroup())
-        writePDB(name+'_complex_p2.pdb', p2.toAtomGroup())
-        writePDB(name+'_complex.pdb', p1.toAtomGroup() + p2.toAtomGroup())
-        
-        scr.get_scr(name+'_complex_p1.pdb', name+'_complex_p2.pdb', name+'_complex.pdb', name)
-        
-        rimcoresup = pd.read_csv(name+'_rimcoresup.csv', header=None, sep=' ')
-        
-        interface = []
-        with open('scrinfo','w') as fh_csr:
-            for index, row in rimcoresup.iterrows():
-                fh_csr.write(str(row[2])+';'+row[1]+';'+row[5]+'\n')
-                #Chain ID, Resnum, SCR
-                interface.append((row[1], row[2], row[5]))
                 
-        """
-        
-        ##########################################################################
-        """
-        map_name = path.join(inter_dir_mut, mut_name, 'wt_' + name)
-        save_pdb_interface(wt_pdb, map_name, interface)
-        map_name = path.join(inter_dir_mut, mut_name, 'mut_' + name)
-        save_pdb_interface(mut_pdb, map_name, interface)
-        if model_ind == 1:
-            tl.save_obj((interface, ddg), map_name + '.interface')
-        remove(name+'_complex_p1.pdb')
-        remove(name+'_complex_p2.pdb')
-        remove(name+'_complex.pdb')
-        remove(name+'_rimcoresup.csv')
-        return
-        """
-        ##########################################################################
-                
-        
-        #mapcommand = [bin_path, "--mode", "map", "-i", wt_pdb, "--native", "-m", str(v_dim), "-t", "167", "-v", "0.8", "-o", wt_pdb.replace('pdb','bin')]
         mapcommand = [bin_path, "--mode", "map", "-i", wt_pdb, "--native", "-m", str(v_dim), "-t", "167", "-v", "0.8", "-o", 'wt.bin']
         subprocess.call(mapcommand)
-        #mapcommand = [bin_path, "--mode", "map", "-i", mut_pdb, "--native", "-m", str(v_dim), "-t", "167", "-v", "0.8", "-o", mut_pdb.replace('pdb','bin')]
+
         mapcommand = [bin_path, "--mode", "map", "-i", mut_pdb, "--native", "-m", str(v_dim), "-t", "167", "-v", "0.8", "-o", 'mut.bin']
         subprocess.call(mapcommand)
         
@@ -163,9 +122,6 @@ def mapcomplex(wt_pdb, mut_pdb, protein_complex, mutate_complex, ddg, model_ind,
         #remove(name+'_complex_p2.pdb')
         #remove(name+'_complex.pdb')
         #remove(name+'_rimcoresup.csv')
-        
-        
-        
         
         
         ##########################################################################
@@ -252,8 +208,7 @@ def manage_mut_files(use_multiprocessing):
         mkdir(map_dir_mut_sep)
     if not path.exists(inter_dir_mut):
         mkdir(inter_dir_mut)
-    #mut_directory = path.join('/home/yasser/myThesis/ProtPartDisc/Mutation_3DCNN_Analysis/skempi', 'mutations')
-    mut_directory = '/media/yasser/YasserMB2/Backup_myThesis_ALL/Backup_Backrub_myThesis/Temp/output_bu'
+    mut_directory = 'backrub_models_directory'
     muts = listdir(mut_directory)
     mut_cases = []
     for mut in muts:
