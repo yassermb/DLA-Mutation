@@ -168,7 +168,6 @@ def mapcomplex(comp_inter, name, map_path):
         if not res_inter_rec or not res_inter_lig:
             return [],[],[]
         
-        #tl.coarse_grain_pdb('train.pdb')
         mapcommand = [bin_path, "--mode", "map", "-i", name+'_train.pdb', "--native", "-m", str(v_dim), "-t", "167", "-v", "0.8", "-o", name+'_train.bin']
         call(mapcommand)
         
