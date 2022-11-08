@@ -89,7 +89,7 @@ Each output represents interface of a complex and contains a set of local enviro
 An atomic density map is a 4 dimensional tensor: a voxelized 3D grid with a size of ```24*24*24```. Each voxel encodes some characteristics of the protein atoms. Namely, the first 167 dimensions correspond to the
 atom types that can be found in amino acids (without the hydrogen). This dimension can be reduced to 4 element symbols (C,N,O,S) by running ```python generate_cubes_reduce_channels_multiproc.py``` (ATTENTION: This code overwrites the existing files). Dimension reduction must be applied in order to use models of BM5 as well as the general model.
 
-#### Prediction of the masked residue
+#### Predicting the type of masked residue
 
 From directory 'Test' run ```python test.py```
 It processes all the target complexes and their conformations and produces csv file 'predictions_SCR'. Each row of the output file belongs to a conformation and it has 9 columns separated by 'tab':
