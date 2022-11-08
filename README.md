@@ -72,7 +72,7 @@ Example
 ![](Images/mask1.png?raw=true "mask1")
 ![](Images/mask2.png?raw=true "mask2")
 
-- Run ```Representation/python generate_cubes_interface.py```.
+- Run ```Representation/generate_cubes_interface.py```.
 
 The output will be directory 'map_dir' with the following structure:
 
@@ -87,7 +87,7 @@ Example
 Each output represents interface of a complex and contains a set of local environments (*e.g. atomic density map, structure classes (S,C,R), ...*)
 
 An atomic density map is a 4 dimensional tensor: a voxelized 3D grid with a size of ```24*24*24```. Each voxel encodes some characteristics of the protein atoms. Namely, the first 167 dimensions correspond to the
-atom types that can be found in amino acids (without the hydrogen). This dimension can be reduced to 4 element symbols (C,N,O,S) by running ```python generate_cubes_reduce_channels_multiproc.py``` (ATTENTION: This code overwrites the existing files). Dimension reduction must be applied in order to use models of BM5 as well as the general model.
+atom types that can be found in amino acids (without the hydrogen). This dimension can be reduced to 4 element symbols (C,N,O,S) by running ```python generate_cubes_reduce_channels_multiproc.py``` (ATTENTION: This code overwrites the existing files).
 
 #### Predicting the type of masked residue
 
@@ -119,9 +119,17 @@ Alternatively ....
 
 ## Downstream tasks
 
-### Predicting mutation-induced changes of binding affinity 
+### Predicting mutation-induced changes of binding affinity
 
+### Predicting the physico-chemical class of interfacial residues
 
+- Specify the non masking in ```Representation/generate_cubes_interface.py``` and run the code.
+- Run ```Embeddings/??.py```
+
+### Predicting the function of the protein complex
+
+- Specify the non masking in ```Representation/generate_cubes_interface.py``` and run the code.
+- Run ```Embeddings/??.py```
 
 
 
