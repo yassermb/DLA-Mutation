@@ -25,7 +25,7 @@ from random import shuffle, random, seed, sample
 from numpy import newaxis
 import matplotlib.pyplot as plt
 import time
-import deepScoring.load_data as load
+import load_data as load
 
 import collections
 import scr
@@ -43,7 +43,7 @@ map_dir_mut = 'map_dir_mut'
 map_dir_mut_sep = 'map_dir_mut_sep'
 inter_dir_mut = 'inter_dir_mut'
 
-bin_path = "./mapsGenerator/build/maps_generator"
+bin_path = "./maps_generator"
 
 v_dim = 24
 

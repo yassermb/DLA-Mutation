@@ -221,14 +221,9 @@ fhandler_train = open('train_log', 'w')
 fhandler_test = open('test_log', 'w')
 
 
-#List of pair cluster ids for specific complexes (such as Covid RBD and extreme cases of SKEMPI) to be excluded from the training!
+# The cluster id of Covid RBD is excluded from the training!
 ######################################################################
-list_clustid = [(178, 440),  #2PCC_A_B
-                (2992, 3676),#3SCJ_A_E
-                (2889, 264), #1EAW_A_B
-                (392, 1596), #1BRS_A_D
-                (3746, 8),   #1S1Q_A_B
-                (2640, 13008)] #1IAR_A_B
+list_clustid = [(2992, 3676)] #3SCJ_A_E
 def load_chains_cluster(file_pdb_cluster):
     """Reads all PDB chains in clusters.
 

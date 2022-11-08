@@ -1,0 +1,32 @@
+name: dla
+
+channels:
+  - conda-forge
+  - anaconda
+  - pytorch
+
+dependencies:
+  - python=3.8
+  - compilers
+  - cudnn=7.6
+  - cudatoolkit=10.1
+  - cudatoolkit-dev=10.1
+  - cupti=10.1
+  - pytorch-gpu=1.7.1
+  - torchvision=0.8.2
+  - cmake
+  - jupyterlab
+  - mpi4py
+  - nodejs
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - prody
+  - lz4
+  - pip
+  - pip:
+    - tensorflow-gpu==2.3
+    - pypdb
+    - ipython
+  - bokeh

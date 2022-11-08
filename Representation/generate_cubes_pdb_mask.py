@@ -7,7 +7,6 @@ import numpy as np
 from prody import *
 import glob
 import shutil
-#import matplotlib.pyplot as plt
 import seaborn as sns
 from math import exp
 from subprocess import CalledProcessError, check_call, call
@@ -23,7 +22,7 @@ from numpy import asarray
 from sklearn.preprocessing import OneHotEncoder
 import subprocess
 from subprocess import CalledProcessError, check_call
-import deepScoring.load_data as load
+import load_data as load
 from sklearn.preprocessing import MinMaxScaler
 
 sys.path.insert(1, '../lib/')
@@ -37,7 +36,7 @@ if not path.exists(inter_dir_pdb):
     mkdir(inter_dir_pdb)
 
 
-bin_path = "./mapsGenerator_mask/build/maps_generator"
+bin_path = "./maps_generator_masked_randomcenter_sphere_5A"
 v_dim = 24
 
 
@@ -180,7 +179,6 @@ def mapcomplex(comp_inter, name, map_path):
         #print(list(dataset_train.meta[:,0]))
         #print(res_name)
         #print(list(map(lambda x: x[2],res_inter_rec)) + list(map(lambda x: x[2],res_inter_lig)))
-        #ddddd
         
         
         print(dataset_train.maps.shape)
@@ -289,7 +287,6 @@ def process_com(com_path_in, com, report_dict):
             comp_list.append(sam_tup)
             
         except Exception as e:
-            #dddd
             logging.error("Bad interface!" + '\ninter_rec: ' +  interface_file_rec + '\ninter_lig: ' + interface_file_lig + '\nError message: ' + str(e) + 
                           "\nMore information:\n" + traceback.format_exc())
     report_dict[path.basename(com_path_in)] = comp_list
@@ -304,7 +301,6 @@ def manage_pdb_files(use_multiprocessing):
         com_cases.append((com_path_in, com))
     
     shuffle(com_cases)
-    #com_cases=com_cases[50000:]
     report_dict = tl.do_processing(com_cases, process_com, use_multiprocessing)
     return report_dict
 
