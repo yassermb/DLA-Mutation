@@ -52,28 +52,21 @@ ssDLA works in two steps:
 ### Generating masked locally oriented cubes
 
 #### Dataset of conformations:
-Place the ensemble of conformations in a directory (*e.g. 'Examples/conformations_directory'*) like below: 
+Place the complexes in a directory (*e.g. 'Examples/complex_directory'*) like below: 
 
 ```
 Example
-|___conformations_list.txt
+|___complex_list.txt
 |
-|___conformations_directory
+|___complex_directory
     |
-    |___target complex 1
-    |   |   Conformation 1
-    |   |   Conformation 2
-    |   |   ...
-    |
-    |___target complex 2
-    |   |   Conformation 1
-    |   |   Conformation 2
-    |   |   ...
+    |___complex 1
+    |___complex 2
     |
     ..........
 ```
 
-'conformations_list.txt' is a csv file that contains five columns separated by ';': Name of target complex (`Comp`); receptor chain ID(s) (`ch1`), ligand chain ID(s) (`ch2`); Name of the conformation file (`Conf`); class of the conformation (`Class`, 0:incorrect, 1: near-native).
+'complex_list.txt' is a csv file that contains three columns separated by ';': Name of target complex (`Comp`); receptor chain ID(s) (`ch1`), ligand chain ID(s) (`ch2`).
 
 
 #### Processing the conformations
@@ -88,30 +81,15 @@ The output will be directory 'map_dir' with the following structure:
 ```
 Example
 |___map_dir
-    |___target complex 1
-    |   |___0
-    |   |   |   conformation 1
-    |   |   |   conformation 2
-    |   |
-    |   |___1
-    |       |   conformation 3
-    |       |   conformation 4
-    |   
-    |___target complex 2
-    |   |___0
-    |   |   |   conformation 1
-    |   |   |   conformation 2
-    |   |
-    |   |___1
-    |       |   conformation 3
-    |       |   conformation 4
+    |___complex 1
+    |___complex 2
     ..........
 ```
 
-Each output represents interface of a conformation and contains a set of local environments (*e.g. atomic density map, structure classes (S,C,R), topology of the interface, ...*)
+Each output represents interface of a complex and contains a set of local environments (*e.g. atomic density map, structure classes (S,C,R), ...*)
 
 An atomic density map is a 4 dimensional tensor: a voxelized 3D grid with a size of ```24*24*24```. Each voxel encodes some characteristics of the protein atoms. Namely, the first 167 dimensions correspond to the
-atom types that can be found in amino acids (without the hydrogen). This dimension can be reduced to 4 element symbols (C,N,O,S) by running ```python generate_cubes_reduce_channels_multiproc.py``` (ATTENTION: This code overwrites the existing files). Dimension reduction must be applied in order to use models of BM5 as well as the general model. 
+atom types that can be found in amino acids (without the hydrogen). This dimension can be reduced to 4 element symbols (C,N,O,S) by running ```python generate_cubes_reduce_channels_multiproc.py``` (ATTENTION: This code overwrites the existing files). Dimension reduction must be applied in order to use models of BM5 as well as the general model.
 
 ### Deep learning framework
 
