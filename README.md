@@ -39,20 +39,14 @@ DLA-Ranker can be run on Linux, MacOS, and Windows. We recommend to use DLA-Rank
 
 All-in-one: Run conda create --name dla --file dla.yml
 
-## self-supervised Deep Local Analysis (ssDLA)
+## Representation learning with self-supervised Deep Local Analysis (ssDLA)
+ssDLA is a structure-based general purpose model to generate informative representations from the local environments (masked or not-masked) around interfacial residues for downstream tasks.
 
-ssDLA works in two steps:
+### Finding residue-specific patterns
+Here we evaluate the pre-trained ssDLA models to predict the type of amino acid from the masked cube.
 
--   Generating a set of masked locally orient cubes representing the interface.
--   Running the deep learning framework to:
-   - *Train: creating a new ssDLA model.*
-   - *Test: Evaluating pre-trained ssDLA model to predict the type of amino acid from the masked cube.*
-   - *Encode: Extracting embeddings from the interfacial residues for downstream tasks.*
-
-### Generating masked locally oriented cubes
-
-#### Dataset of conformations:
-Place the complexes in a directory (*e.g. 'Examples/complex_directory'*) like below: 
+#### Generating masked locally oriented cubes
+- Place the protein complexes in a directory (*e.g. 'Examples/complex_directory'*) like below. The 'complex_list.txt' is a csv file that contains three columns separated by ';': Name of target complex (`Comp`); receptor chain ID(s) (`ch1`), ligand chain ID(s) (`ch2`). 
 
 ```
 Example
@@ -66,7 +60,7 @@ Example
     ..........
 ```
 
-'complex_list.txt' is a csv file that contains three columns separated by ';': Name of target complex (`Comp`); receptor chain ID(s) (`ch1`), ligand chain ID(s) (`ch2`).
+dddd
 
 
 #### Processing the conformations
