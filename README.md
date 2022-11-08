@@ -72,7 +72,7 @@ Example
 ![](Images/mask1.png?raw=true "mask1")
 ![](Images/mask2.png?raw=true "mask2")
 
-- Run ```Representation/generate_cubes_interface.py```.
+- From ```Representation``` run ```python generate_cubes_interface.py```.
 
 The output will be directory 'map_dir' with the following structure:
 
@@ -123,13 +123,17 @@ Alternatively ....
 
 ### Predicting the physico-chemical class of interfacial residues
 
-- Specify the non masking in ```Representation/generate_cubes_interface.py``` and run the code.
-- Run ```Embeddings/??.py```
+- Specify the non masking in ```Representation/generate_cubes_interface.py```.
+- From ```Representation``` run ```python generate_cubes_interface.py```.
+- From ```Embeddings``` run ??? to extract the embeddings.
+- From ```Embeddings``` run ??? to train a small neural network.
 
 ### Predicting the function of the protein complex
 
-- Specify the non masking in ```Representation/generate_cubes_interface.py``` and run the code.
-- Run ```Embeddings/??.py```
+- Specify the non masking in ```Representation/generate_cubes_interface.py```.
+- From ```Representation``` run ```python generate_cubes_interface.py```.
+- From ```Embeddings``` run ??? to extract the embeddings. 
+- From ```Embeddings``` run ??? to train a small neural network.
 
 
 
