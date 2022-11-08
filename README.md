@@ -67,6 +67,9 @@ Example
     - Masking a sphere of radius 3A randomly centered on an atom of the central residue. 
     - Masking only the side-chain the central residue.
     - Masking the whole central residue.  
+    
+![](Images/mask1.png?raw=true "mask1")
+![](Images/mask2.png?raw=true "mask2")
 
 The output will be directory 'map_dir' with the following structure:
 
