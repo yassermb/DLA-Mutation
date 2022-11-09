@@ -104,7 +104,7 @@ map_dir = '../Examples/map_dir'
 output_file = 'output_xray_wt_mask_4channels.csv'
 intermediate_file = 'intermediate_xray_wt_mask_200_4channels.csv'
 
-model = load_model(path.join('Models', 'ssDLA_model_4channels'))
+model = load_model(path.join('../Models', 'ssDLA_model_4channels'))
 
 def load_map(sample_test):
     check_call(

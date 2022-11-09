@@ -97,16 +97,12 @@ three_letter ={'V':'VAL', 'I':'ILE', 'L':'LEU', 'E':'GLU', 'Q':'GLN', \
 
 v_dim = 24
 
-#map_dir = 'validations'
-#map_dir = 'map_dir_backrub_dynamics'
-#map_dir = 'skempi_mutations_mask/map_dir_skempi_wt'
-#map_dir = 'skempi_mutations_mask/map_dir_mut_sep'
-map_dir = '/home/yasser/myThesis/ProtPartDisc/python_scripts/map_dir_mut_sep_nomask_4channels'
+map_dir = '../Examples/map_dir_mut_sep_nomask_4channels'
 
 output_file = 'output_backrub_nomask_4channels.csv'
-intermediate_file = 'intermediate_backrub_nomask_4channels.csv'
+intermediate_file = 'intermediate_backrub_nomask_200_4channels.csv'
 
-model = load_model(path.join('models5_nonorm_classweight_Porlineweight08_Others_4channels', '0_733_model'))
+model = load_model(path.join('../Models', 'ssDLA_model_4channels'))
 
 def load_map(sample_test):
     check_call(

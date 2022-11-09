@@ -1,0 +1,648 @@
+core.init: Checking for fconfig files in pwd and ./rosetta/flags 
+core.init: Rosetta version: rosetta.source.release-188 r188 2018.33+release.7111c54 7111c54c14ba9a53c012a524f8f1438a8e3fb020 https://www.rosettacommons.org 2018-08-14T01:44:18.723947
+core.init: command: /home/mohseni/myStage/Softwares/Rosetta/rosetta_src_3.10_bundle/rosetta_src_2018.33.60351_bundle/main/source/bin/rosetta_scripts.linuxgccrelease -s /home/mohseni/myThesis/GitLab/myThesis/Temp/output/1F5R/19/wt_19_10000.pdb -parser:protocol /home/mohseni/myThesis/GitLab/myThesis/ddG-backrub_Step2.xml -parser:script_vars chainstomove=I inter_resfile_relpath=/home/mohseni/myThesis/GitLab/myThesis/Temp/output/1F5R/interface_residues.resfile mutate_resfile_relpath=/home/mohseni/myThesis/GitLab/myThesis/Temp/output/1F5R/nataa_mutations.resfile br_pose_relpath=/home/mohseni/myThesis/GitLab/myThesis/Temp/output/1F5R/19/backrub_19_10000.pdb number_backrub_trials=10000 max_minimization_iter=5000 abs_score_convergence_thresh=1.0 backrub_trajectory_stride=10000 -restore_talaris_behavior -in:file:fullatom -ignore_unrecognized_res -ignore_zero_occupancy false -ex1 -ex2
+core.init: 'RNG device' seed mode, using '/dev/urandom', seed=-527165597 seed_offset=0 real_seed=-527165597
+core.init.random: RandomGenerator:init: Normal mode, seed=-527165597 RG_type=mt19937
+core.init: Resolved executable path: /home/mohseni/myStage/Softwares/Rosetta/rosetta_src_3.10_bundle/rosetta_src_2018.33.60351_bundle/main/source/build/src/release/linux/4.15/64/x86/gcc/7/default/rosetta_scripts.default.linuxgccrelease
+core.init: Looking for database based on location of executable: /home/mohseni/myStage/Softwares/Rosetta/rosetta_src_3.10_bundle/rosetta_src_2018.33.60351_bundle/main/database/
+protocols.jd2.PDBJobInputter: Instantiate PDBJobInputter
+protocols.jd2.PDBJobInputter: PDBJobInputter::fill_jobs
+protocols.jd2.PDBJobInputter: pushed /home/mohseni/myThesis/GitLab/myThesis/Temp/output/1F5R/19/wt_19_10000.pdb nstruct index 1
+protocols.evaluation.ChiWellRmsdEvaluatorCreator: Evaluation Creator active ... 
+protocols.jd2.PDBJobInputter: PDBJobInputter::pose_from_job
+protocols.jd2.PDBJobInputter: filling pose from PDB /home/mohseni/myThesis/GitLab/myThesis/Temp/output/1F5R/19/wt_19_10000.pdb
+core.chemical.GlobalResidueTypeSet: Finished initializing fa_standard residue type set.  Created 544 residue types
+core.chemical.GlobalResidueTypeSet: Total time to initialize 1.02721 seconds.
+core.import_pose.import_pose: File '/home/mohseni/myThesis/GitLab/myThesis/Temp/output/1F5R/19/wt_19_10000.pdb' automatically determined to be of type PDB
+core.conformation.Conformation: Found disulfide between residues 221 271
+core.conformation.Conformation: current variant for 221 CYS
+core.conformation.Conformation: current variant for 271 CYS
+core.conformation.Conformation: current variant for 221 CYD
+core.conformation.Conformation: current variant for 271 CYD
+core.conformation.Conformation: Found disulfide between residues 7 130
+core.conformation.Conformation: current variant for 7 CYS
+core.conformation.Conformation: current variant for 130 CYS
+core.conformation.Conformation: current variant for 7 CYD
+core.conformation.Conformation: current variant for 130 CYD
+core.conformation.Conformation: Found disulfide between residues 230 254
+core.conformation.Conformation: current variant for 230 CYS
+core.conformation.Conformation: current variant for 254 CYS
+core.conformation.Conformation: current variant for 230 CYD
+core.conformation.Conformation: current variant for 254 CYD
+core.conformation.Conformation: Found disulfide between residues 25 41
+core.conformation.Conformation: current variant for 25 CYS
+core.conformation.Conformation: current variant for 41 CYS
+core.conformation.Conformation: current variant for 25 CYD
+core.conformation.Conformation: current variant for 41 CYD
+core.conformation.Conformation: Found disulfide between residues 246 267
+core.conformation.Conformation: current variant for 246 CYS
+core.conformation.Conformation: current variant for 267 CYS
+core.conformation.Conformation: current variant for 246 CYD
+core.conformation.Conformation: current variant for 267 CYD
+core.conformation.Conformation: Found disulfide between residues 109 203
+core.conformation.Conformation: current variant for 109 CYS
+core.conformation.Conformation: current variant for 203 CYS
+core.conformation.Conformation: current variant for 109 CYD
+core.conformation.Conformation: current variant for 203 CYD
+core.conformation.Conformation: Found disulfide between residues 116 176
+core.conformation.Conformation: current variant for 116 CYS
+core.conformation.Conformation: current variant for 176 CYS
+core.conformation.Conformation: current variant for 116 CYD
+core.conformation.Conformation: current variant for 176 CYD
+core.conformation.Conformation: Found disulfide between residues 141 155
+core.conformation.Conformation: current variant for 141 CYS
+core.conformation.Conformation: current variant for 155 CYS
+core.conformation.Conformation: current variant for 141 CYD
+core.conformation.Conformation: current variant for 155 CYD
+core.conformation.Conformation: Found disulfide between residues 166 190
+core.conformation.Conformation: current variant for 166 CYS
+core.conformation.Conformation: current variant for 190 CYS
+core.conformation.Conformation: current variant for 166 CYD
+core.conformation.Conformation: current variant for 190 CYD
+protocols.rosetta_scripts.RosettaScriptsParser: dock_design_filename=/home/mohseni/myThesis/GitLab/myThesis/ddG-backrub_Step2.xml
+protocols.rosetta_scripts.RosettaScriptsParser: Variable substitution will occur with the following values: '%%abs_score_convergence_thresh%%'='1.0';  '%%backrub_trajectory_stride%%'='10000';  '%%br_pose_relpath%%'='/home/mohseni/myThesis/GitLab/myThesis/Temp/output/1F5R/19/backrub_19_10000.pdb';  '%%chainstomove%%'='I';  '%%inter_resfile_relpath%%'='/home/mohseni/myThesis/GitLab/myThesis/Temp/output/1F5R/interface_residues.resfile';  '%%max_minimization_iter%%'='5000';  '%%mutate_resfile_relpath%%'='/home/mohseni/myThesis/GitLab/myThesis/Temp/output/1F5R/nataa_mutations.resfile';  '%%number_backrub_trials%%'='10000';  
+protocols.rosetta_scripts.RosettaScriptsParser: Substituted script:
+<ROSETTASCRIPTS>
+  <SCOREFXNS>
+    <ScoreFunction name="fa_talaris2014" weights="talaris2014"/>
+    <ScoreFunction name="fa_talaris2014_cst" weights="talaris2014">
+      <Reweight scoretype="atom_pair_constraint" weight="1.0"/>
+      <Set fa_max_dis="9.0"/>
+    </ScoreFunction>
+  </SCOREFXNS>
+
+  <!-- ### Only required input file (other than PDB) - mutation resfile ### -->
+  <!-- #### All residues must be set to be NATAA packable at top of resfile ### -->
+  <TASKOPERATIONS>
+    <ReadResfile name="res_inter" filename="/home/mohseni/myThesis/GitLab/myThesis/Temp/output/1F5R/interface_residues.resfile"/>
+    <ReadResfile name="res_mutate" filename="/home/mohseni/myThesis/GitLab/myThesis/Temp/output/1F5R/nataa_mutations.resfile"/>
+  </TASKOPERATIONS>
+
+  <RESIDUE_SELECTORS>
+    <Task name="resselector" fixed="0" packable="0" designable="1" task_operations="res_inter"/>
+    <Neighborhood name="bubble" selector="resselector" distance="8.0"/>
+    <PrimarySequenceNeighborhood name="bubble_adjacent" selector="bubble" lower="1" upper="1"/>
+    <StoredResidueSubset name="restore_interface_shell" subset_name="interface_shell"/>
+    <Not name="everythingelse" selector="restore_interface_shell"/>
+  </RESIDUE_SELECTORS>
+  <TASKOPERATIONS>
+    <OperateOnResidueSubset name="repackonly" selector="restore_interface_shell">
+      <RestrictToRepackingRLT/>
+    </OperateOnResidueSubset>
+    <OperateOnResidueSubset name="norepack" selector="everythingelse">
+      <PreventRepackingRLT/>
+    </OperateOnResidueSubset>
+    <UseMultiCoolAnnealer name="multicool" states="6"/>
+    <ExtraChiCutoff name="extrachizero" extrachi_cutoff="0"/>
+    <InitializeFromCommandline name="commandline_init"/>
+    <RestrictToRepacking name="restrict_to_repacking"/>
+  </TASKOPERATIONS>
+
+  <FILTERS>
+  </FILTERS>
+
+  <MOVERS>
+    <StoreResidueSubset name="interface_shell_storer" subset_name="interface_shell" residue_selector="bubble_adjacent" />
+
+    <AddConstraintsToCurrentConformationMover name="addcst" use_distance_cst="1" coord_dev="0.5" min_seq_sep="0" max_distance="9" CA_only="1" bound_width="0.0" cst_weight="0.0"/>
+    <ClearConstraintsMover name="clearcst"/>
+    <MinMover name="minimize" scorefxn="fa_talaris2014_cst" chi="1" bb="1" type="lbfgs_armijo_nonmonotone" tolerance="0.000001" max_iter="5000" abs_score_convergence_threshold="1.0"/>
+
+    <PackRotamersMover name="repack" scorefxn="fa_talaris2014" task_operations="commandline_init,repackonly,norepack,multicool"/>
+    <PackRotamersMover name="mutate" scorefxn="fa_talaris2014" task_operations="commandline_init,res_mutate,multicool"/>
+
+    <ReportToDB name="dbreport" batch_description="interface_ddG" database_name="ddG.db3">
+      <ScoreTypeFeatures/>
+      <ScoreFunctionFeatures scorefxn="fa_talaris2014"/>
+      <StructureScoresFeatures scorefxn="fa_talaris2014"/>
+    </ReportToDB>
+
+    <ReportToDB name="structreport" batch_description="interface_ddG_struct" database_name="struct.db3">
+      <PoseConformationFeatures/>
+      <PdbDataFeatures/>
+      <JobDataFeatures/>
+      <ResidueFeatures/>
+      <PoseCommentsFeatures/>
+      <ProteinResidueConformationFeatures/>
+      <ResidueConformationFeatures/>
+    </ReportToDB>
+
+    <SavePoseMover name="save_wt_bound_pose" restore_pose="0" reference_name="wt_bound_pose"/>  <!--Somehow you should get this pose (wild-type pose) from the step 1 so you can calculate the ddG score using InterfaceDdGMover-->
+    <LoadPDB name="load_br_bound_pose" filename="/home/mohseni/myThesis/GitLab/myThesis/Temp/output/1F5R/19/backrub_19_10000.pdb"/>
+    <!--SavePoseMover name="save_backrub_pose" restore_pose="0" reference_name="backrubpdb"/-->
+    <!--SavePoseMover name="restore_backrub_pose" restore_pose="1" reference_name="backrubpdb"/-->
+
+    <InterfaceDdGMover name="int_ddG_mover" wt_ref_savepose_mover="save_wt_bound_pose" chain_name="I" db_reporter="dbreport" scorefxn="fa_talaris2014"/> <!--You need it in step 2 to calculate ddG score with respect to the wt pose (as reference) and mt pose (actual pose)-->
+
+    <ScoreMover name="apply_score" scorefxn="fa_talaris2014_cst" verbose="0"/>
+
+    <!-- This ParsedProtocol allows the ddG calculation to take place multiple times along the backrub trajectory, if desired -->
+    <ParsedProtocol name="finish_ddg_post_backrub">
+      <!--Add mover_name="save_backrub_pose"/-->
+      <!--Add mover_name="structreport"/-->
+
+      <!--Add mover_name="repack"/-->
+
+      <!--Add mover_name="addcst"/-->
+      <!--Add mover_name="minimize"/-->
+      <!--Add mover_name="clearcst"/-->
+
+      <!--Add mover_name="save_wt_bound_pose"/-->
+      <!--Add mover_name="structreport"/-->
+      <!--Add mover_name="restore_backrub_pose"/-->
+
+      <!--Add mover_name="load_br_bound_pose"/-->
+      <Add mover_name="mutate"/>
+      <Add mover_name="repack"/>
+
+      <Add mover_name="addcst"/>
+      <Add mover_name="minimize"/>
+      <Add mover_name="clearcst"/>
+      <Add mover_name="structreport"/>
+
+      <Add mover_name="int_ddG_mover"/>
+    </ParsedProtocol>
+
+    <BackrubProtocol name="backrub" mc_kt="1.2" ntrials="10000" pivot_residue_selector="restore_interface_shell" task_operations="restrict_to_repacking,commandline_init,extrachizero" recover_low="0" trajectory_stride="10000" trajectory_apply_mover="finish_ddg_post_backrub"/>
+
+  </MOVERS>
+  <APPLY_TO_POSE>
+  </APPLY_TO_POSE>
+  <PROTOCOLS>
+    <Add mover_name="save_wt_bound_pose"/>
+    <Add mover_name="load_br_bound_pose"/>
+    <Add mover_name="addcst"/>
+    <Add mover_name="apply_score"/> <!-- Necessary to initialize neighbor graph -->
+    <Add mover_name="interface_shell_storer"/>
+
+    <Add mover_name="minimize"/>
+    <Add mover_name="clearcst"/>
+
+    <Add mover_name="backrub"/>
+  </PROTOCOLS>
+  <OUTPUT />
+</ROSETTASCRIPTS>
+protocols.rosetta_scripts.RosettaScriptsParser: Generating XML Schema for rosetta_scripts...
+protocols.rosetta_scripts.RosettaScriptsParser: ...done
+protocols.rosetta_scripts.RosettaScriptsParser: Initializing schema validator...
+protocols.rosetta_scripts.RosettaScriptsParser: ...done
+protocols.rosetta_scripts.RosettaScriptsParser: Validating input script...
+protocols.rosetta_scripts.RosettaScriptsParser: ...done
+protocols.rosetta_scripts.RosettaScriptsParser: Parsed script:
+<ROSETTASCRIPTS>
+	<SCOREFXNS>
+		<ScoreFunction name="fa_talaris2014" weights="talaris2014"/>
+		<ScoreFunction name="fa_talaris2014_cst" weights="talaris2014">
+			<Reweight scoretype="atom_pair_constraint" weight="1.0"/>
+			<Set fa_max_dis="9.0"/>
+		</ScoreFunction>
+	</SCOREFXNS>
+	<TASKOPERATIONS>
+		<ReadResfile filename="/home/mohseni/myThesis/GitLab/myThesis/Temp/output/1F5R/interface_residues.resfile" name="res_inter"/>
+		<ReadResfile filename="/home/mohseni/myThesis/GitLab/myThesis/Temp/output/1F5R/nataa_mutations.resfile" name="res_mutate"/>
+	</TASKOPERATIONS>
+	<RESIDUE_SELECTORS>
+		<Task designable="1" fixed="0" name="resselector" packable="0" task_operations="res_inter"/>
+		<Neighborhood distance="8.0" name="bubble" selector="resselector"/>
+		<PrimarySequenceNeighborhood lower="1" name="bubble_adjacent" selector="bubble" upper="1"/>
+		<StoredResidueSubset name="restore_interface_shell" subset_name="interface_shell"/>
+		<Not name="everythingelse" selector="restore_interface_shell"/>
+	</RESIDUE_SELECTORS>
+	<TASKOPERATIONS>
+		<OperateOnResidueSubset name="repackonly" selector="restore_interface_shell">
+			<RestrictToRepackingRLT/>
+		</OperateOnResidueSubset>
+		<OperateOnResidueSubset name="norepack" selector="everythingelse">
+			<PreventRepackingRLT/>
+		</OperateOnResidueSubset>
+		<UseMultiCoolAnnealer name="multicool" states="6"/>
+		<ExtraChiCutoff extrachi_cutoff="0" name="extrachizero"/>
+		<InitializeFromCommandline name="commandline_init"/>
+		<RestrictToRepacking name="restrict_to_repacking"/>
+	</TASKOPERATIONS>
+	<FILTERS/>
+	<MOVERS>
+		<StoreResidueSubset name="interface_shell_storer" residue_selector="bubble_adjacent" subset_name="interface_shell"/>
+		<AddConstraintsToCurrentConformationMover CA_only="1" bound_width="0.0" coord_dev="0.5" cst_weight="0.0" max_distance="9" min_seq_sep="0" name="addcst" use_distance_cst="1"/>
+		<ClearConstraintsMover name="clearcst"/>
+		<MinMover abs_score_convergence_threshold="1.0" bb="1" chi="1" max_iter="5000" name="minimize" scorefxn="fa_talaris2014_cst" tolerance="0.000001" type="lbfgs_armijo_nonmonotone"/>
+		<PackRotamersMover name="repack" scorefxn="fa_talaris2014" task_operations="commandline_init,repackonly,norepack,multicool"/>
+		<PackRotamersMover name="mutate" scorefxn="fa_talaris2014" task_operations="commandline_init,res_mutate,multicool"/>
+		<ReportToDB batch_description="interface_ddG" database_name="ddG.db3" name="dbreport">
+			<ScoreTypeFeatures/>
+			<ScoreFunctionFeatures scorefxn="fa_talaris2014"/>
+			<StructureScoresFeatures scorefxn="fa_talaris2014"/>
+		</ReportToDB>
+		<ReportToDB batch_description="interface_ddG_struct" database_name="struct.db3" name="structreport">
+			<PoseConformationFeatures/>
+			<PdbDataFeatures/>
+			<JobDataFeatures/>
+			<ResidueFeatures/>
+			<PoseCommentsFeatures/>
+			<ProteinResidueConformationFeatures/>
+			<ResidueConformationFeatures/>
+		</ReportToDB>
+		<SavePoseMover name="save_wt_bound_pose" reference_name="wt_bound_pose" restore_pose="0"/>
+		<LoadPDB filename="/home/mohseni/myThesis/GitLab/myThesis/Temp/output/1F5R/19/backrub_19_10000.pdb" name="load_br_bound_pose"/>
+		<InterfaceDdGMover chain_name="I" db_reporter="dbreport" name="int_ddG_mover" scorefxn="fa_talaris2014" wt_ref_savepose_mover="save_wt_bound_pose"/>
+		<ScoreMover name="apply_score" scorefxn="fa_talaris2014_cst" verbose="0"/>
+		<ParsedProtocol name="finish_ddg_post_backrub">
+			<Add mover_name="mutate"/>
+			<Add mover_name="repack"/>
+			<Add mover_name="addcst"/>
+			<Add mover_name="minimize"/>
+			<Add mover_name="clearcst"/>
+			<Add mover_name="structreport"/>
+			<Add mover_name="int_ddG_mover"/>
+		</ParsedProtocol>
+		<BackrubProtocol mc_kt="1.2" name="backrub" ntrials="10000" pivot_residue_selector="restore_interface_shell" recover_low="0" task_operations="restrict_to_repacking,commandline_init,extrachizero" trajectory_apply_mover="finish_ddg_post_backrub" trajectory_stride="10000"/>
+	</MOVERS>
+	<APPLY_TO_POSE/>
+	<PROTOCOLS>
+		<Add mover_name="save_wt_bound_pose"/>
+		<Add mover_name="load_br_bound_pose"/>
+		<Add mover_name="addcst"/>
+		<Add mover_name="apply_score"/>
+		<Add mover_name="interface_shell_storer"/>
+		<Add mover_name="minimize"/>
+		<Add mover_name="clearcst"/>
+		<Add mover_name="backrub"/>
+	</PROTOCOLS>
+	<OUTPUT/>
+</ROSETTASCRIPTS>
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: talaris2014.wts
+core.scoring.etable: Starting energy table calculation
+core.scoring.etable: smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: Finished calculating energy tables.
+basic.io.database: Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBPoly1D.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBFadeIntervals.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/sp2_elec_params/HBEval.csv
+basic.io.database: Database file opened: scoring/score_functions/rama/Rama_smooth_dyn.dat_ss_6.4
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/P_AA
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/P_AA_n
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/P_AA_pp
+core.scoring.etable: Using alternate parameters: LJ_RADIUS_SOFT in Etable construction.
+core.scoring.etable: Starting energy table calculation
+core.scoring.etable: smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: Finished calculating energy tables.
+basic.io.database: Database file opened: scoring/score_functions/PairEPotential/pdb_pair_stats_fine
+basic.io.database: Database file opened: scoring/score_functions/InterchainPotential/interchain_env_log.txt
+basic.io.database: Database file opened: scoring/score_functions/InterchainPotential/interchain_pair_log.txt
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/env_log.txt
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/cbeta_den.txt
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/pair_log.txt
+basic.io.database: Database file opened: scoring/score_functions/EnvPairPotential/cenpack_log.txt
+protocols.jd2.parser.ScoreFunctionLoader: defined score function "fa_talaris2014" with weights "talaris2014"
+protocols.jd2.parser.ScoreFunctionLoader: defined score function "fa_talaris2014_cst" with weights "talaris2014"
+protocols.jd2.parser.ScoreFunctionLoader:  setting fa_talaris2014_cst weight atom_pair_constraint to 1
+core.scoring.etable: Starting energy table calculation
+core.scoring.etable: smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: smooth_etable: spline smoothing lj etables (maxdis = 9)
+core.scoring.etable: smooth_etable: spline smoothing solvation etables (max_dis = 9)
+core.scoring.etable: Finished calculating energy tables.
+protocols.jd2.parser.TaskOperationLoader: Defined TaskOperation named "res_inter" of type ReadResfile
+protocols.jd2.parser.TaskOperationLoader: Defined TaskOperation named "res_mutate" of type ReadResfile
+protocols.residue_selectors.TaskSelector: Adding task operation res_inter
+core.select.residue_selector.PrimarySequenceNeighborhoodSelector: Using residue selector bubble
+protocols.jd2.parser.TaskOperationLoader: Defined TaskOperation named "repackonly" of type OperateOnResidueSubset
+protocols.jd2.parser.TaskOperationLoader: Defined TaskOperation named "norepack" of type OperateOnResidueSubset
+protocols.jd2.parser.TaskOperationLoader: Defined TaskOperation named "multicool" of type UseMultiCoolAnnealer
+protocols.jd2.parser.TaskOperationLoader: Defined TaskOperation named "extrachizero" of type ExtraChiCutoff
+protocols.jd2.parser.TaskOperationLoader: Defined TaskOperation named "commandline_init" of type InitializeFromCommandline
+protocols.jd2.parser.TaskOperationLoader: Defined TaskOperation named "restrict_to_repacking" of type RestrictToRepacking
+core.select.residue_selector.util: Found residue selector bubble_adjacent
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "interface_shell_storer" of type StoreResidueSubset
+core.select.residue_selector.util: [ WARNING ] Selector name is empty!
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "addcst" of type AddConstraintsToCurrentConformationMover
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "clearcst" of type ClearConstraintsMover
+protocols.minimization_packing.MinMover: Options chi, bb: 1, 1 omega: 1
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "minimize" of type MinMover
+core.pack.task.xml_util: Object repack reading the following task_operations: Adding the following task operations
+commandline_init repackonly norepack multicool 
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "repack" of type PackRotamersMover
+core.pack.task.xml_util: Object mutate reading the following task_operations: Adding the following task operations
+commandline_init res_mutate multicool 
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "mutate" of type PackRotamersMover
+protocols.RosettaScripts.util: Invoking basic::database::parse_database_connection
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: talaris2014.wts
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: talaris2014.wts
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: talaris2014.wts
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "dbreport" of type ReportToDB
+protocols.RosettaScripts.util: Invoking basic::database::parse_database_connection
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "structreport" of type ReportToDB
+core.pose.ref_pose: Loading PDB: wt_bound_pose
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "save_wt_bound_pose" of type SavePoseMover
+protocols.simple_moves.LoadPDBMover: filename: /home/mohseni/myThesis/GitLab/myThesis/Temp/output/1F5R/19/backrub_19_10000.pdb
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "load_br_bound_pose" of type LoadPDB
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "int_ddG_mover" of type InterfaceDdGMover
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: talaris2014.wts
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "apply_score" of type ScoreMover
+protocols.rosetta_scripts.ParsedProtocol: ParsedProtocol mover with the following movers and filters
+protocols.rosetta_scripts.ParsedProtocol: added mover "mutate" with filter "true_filter"
+protocols.rosetta_scripts.ParsedProtocol: added mover "repack" with filter "true_filter"
+protocols.rosetta_scripts.ParsedProtocol: added mover "addcst" with filter "true_filter"
+protocols.rosetta_scripts.ParsedProtocol: added mover "minimize" with filter "true_filter"
+protocols.rosetta_scripts.ParsedProtocol: added mover "clearcst" with filter "true_filter"
+protocols.rosetta_scripts.ParsedProtocol: added mover "structreport" with filter "true_filter"
+protocols.rosetta_scripts.ParsedProtocol: added mover "int_ddG_mover" with filter "true_filter"
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "finish_ddg_post_backrub" of type ParsedProtocol
+core.mm.MMBondAngleLibrary: MM bond angle sets added fully assigned: 603; wildcard: 0 and 1 virtual parameter.
+core.pack.dunbrack.RotamerLibrary: Using Dunbrack library binary file '/home/mohseni/myStage/Softwares/Rosetta/rosetta_src_3.10_bundle/rosetta_src_2018.33.60351_bundle/main/database/rotamer/ExtendedOpt1-5/Dunbrack10.lib.bin'.
+core.pack.dunbrack.RotamerLibrary: Dunbrack 2010 library took 0.371406 seconds to load from binary
+core.pack.task.xml_util: Object backrub reading the following task_operations: Adding the following task operations
+restrict_to_repacking commandline_init extrachizero 
+core.select.residue_selector.util: Found residue selector restore_interface_shell
+protocols.rosetta_scripts.RosettaScriptsParser: Defined mover named "backrub" of type BackrubProtocol
+protocols.rosetta_scripts.ParsedProtocol: ParsedProtocol mover with the following movers and filters
+protocols.rosetta_scripts.ParsedProtocol: added mover "save_wt_bound_pose" with filter "true_filter"
+protocols.rosetta_scripts.ParsedProtocol: added mover "load_br_bound_pose" with filter "true_filter"
+protocols.rosetta_scripts.ParsedProtocol: added mover "addcst" with filter "true_filter"
+protocols.rosetta_scripts.ParsedProtocol: added mover "apply_score" with filter "true_filter"
+protocols.rosetta_scripts.ParsedProtocol: added mover "interface_shell_storer" with filter "true_filter"
+protocols.rosetta_scripts.ParsedProtocol: added mover "minimize" with filter "true_filter"
+protocols.rosetta_scripts.ParsedProtocol: added mover "clearcst" with filter "true_filter"
+protocols.rosetta_scripts.ParsedProtocol: added mover "backrub" with filter "true_filter"
+protocols.jd2.PDBJobInputter: PDBJobInputter::pose_from_job
+protocols.jd2.PDBJobInputter: filling pose from saved copy /home/mohseni/myThesis/GitLab/myThesis/Temp/output/1F5R/19/wt_19_10000.pdb
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER SavePoseMover - save_wt_bound_pose=======================
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER LoadPDB - load_br_bound_pose=======================
+protocols.simple_moves.LoadPDBMover: Loading pdb file /home/mohseni/myThesis/GitLab/myThesis/Temp/output/1F5R/19/backrub_19_10000.pdb
+core.conformation.Conformation: Found disulfide between residues 221 271
+core.conformation.Conformation: current variant for 221 CYS
+core.conformation.Conformation: current variant for 271 CYS
+core.conformation.Conformation: current variant for 221 CYD
+core.conformation.Conformation: current variant for 271 CYD
+core.conformation.Conformation: Found disulfide between residues 7 130
+core.conformation.Conformation: current variant for 7 CYS
+core.conformation.Conformation: current variant for 130 CYS
+core.conformation.Conformation: current variant for 7 CYD
+core.conformation.Conformation: current variant for 130 CYD
+core.conformation.Conformation: Found disulfide between residues 230 254
+core.conformation.Conformation: current variant for 230 CYS
+core.conformation.Conformation: current variant for 254 CYS
+core.conformation.Conformation: current variant for 230 CYD
+core.conformation.Conformation: current variant for 254 CYD
+core.conformation.Conformation: Found disulfide between residues 25 41
+core.conformation.Conformation: current variant for 25 CYS
+core.conformation.Conformation: current variant for 41 CYS
+core.conformation.Conformation: current variant for 25 CYD
+core.conformation.Conformation: current variant for 41 CYD
+core.conformation.Conformation: Found disulfide between residues 246 267
+core.conformation.Conformation: current variant for 246 CYS
+core.conformation.Conformation: current variant for 267 CYS
+core.conformation.Conformation: current variant for 246 CYD
+core.conformation.Conformation: current variant for 267 CYD
+core.conformation.Conformation: Found disulfide between residues 109 203
+core.conformation.Conformation: current variant for 109 CYS
+core.conformation.Conformation: current variant for 203 CYS
+core.conformation.Conformation: current variant for 109 CYD
+core.conformation.Conformation: current variant for 203 CYD
+core.conformation.Conformation: Found disulfide between residues 116 176
+core.conformation.Conformation: current variant for 116 CYS
+core.conformation.Conformation: current variant for 176 CYS
+core.conformation.Conformation: current variant for 116 CYD
+core.conformation.Conformation: current variant for 176 CYD
+core.conformation.Conformation: Found disulfide between residues 141 155
+core.conformation.Conformation: current variant for 141 CYS
+core.conformation.Conformation: current variant for 155 CYS
+core.conformation.Conformation: current variant for 141 CYD
+core.conformation.Conformation: current variant for 155 CYD
+core.conformation.Conformation: Found disulfide between residues 166 190
+core.conformation.Conformation: current variant for 166 CYS
+core.conformation.Conformation: current variant for 190 CYS
+core.conformation.Conformation: current variant for 166 CYD
+core.conformation.Conformation: current variant for 190 CYD
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER AddConstraintsToCurrentConformationMover - addcst=======================
+protocols.constraint_movers.AddConstraintsToCurrentConformationMover: Using harmonic function
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER ScoreMover - apply_score=======================
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER StoreResidueSubset - interface_shell_storer=======================
+core.select.residue_selector.PrimarySequenceNeighborhoodSelector: Intervals: []
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER MinMover - minimize=======================
+protocols.minimization_packing.MinMover: running another iteration of minimization. difference is: 239.626
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER ClearConstraintsMover - clearcst=======================
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER BackrubProtocol - backrub=======================
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: talaris2014.wts
+basic.io.database: Database file opened: sampling/branch_angle/branch_angle_1.txt
+basic.io.database: Database file opened: sampling/branch_angle/branch_angle_2.txt
+protocols.backrub.BackrubMover: Segment lengths: 3-34 atoms
+protocols.backrub.BackrubMover: Main chain pivot atoms: CA
+protocols.backrub.BackrubMover: Adding backrub segments for residues 1-273
+protocols.backrub.BackrubMover: Total Segments Added: 2547
+protocols.backrub.BackrubProtocol: Score After PDB Load:
+protocols.backrub.BackrubProtocol: 
+------------------------------------------------------------
+ Scores                       Weight   Raw Score Wghtd.Score
+------------------------------------------------------------
+ fa_atr                       1.000   -1178.698   -1178.698
+ fa_rep                       0.550     222.107     122.159
+ fa_sol                       0.938     699.226     655.525
+ fa_intra_rep                 0.005     579.087       2.895
+ mm_bend                      1.000     166.927     166.927
+ fa_elec                      0.875     -98.174     -85.902
+ pro_close                    1.250       1.841       2.301
+ hbond_sr_bb                  1.170     -23.851     -27.906
+ hbond_lr_bb                  1.170     -60.995     -71.364
+ hbond_bb_sc                  1.170     -25.256     -29.549
+ hbond_sc                     1.100      -5.308      -5.838
+ dslf_fa13                    1.250      -7.623      -9.528
+ rama                         0.250     -96.739     -24.185
+ omega                        0.625      36.701      22.938
+ fa_dun                       0.700     448.872     314.211
+ p_aa_pp                      0.400    -142.752     -57.101
+ yhh_planarity                0.625       2.472       1.545
+ ref                          1.000      -1.119      -1.119
+---------------------------------------------------
+ Total weighted score:                     -202.689
+core.pack.task: Packer task: initialize from command line() 
+core.pack.task.operation.TaskOperations: Enabling extrachi cutoff at all positions
+protocols.backrub.BackrubProtocol: Score After Branch Angle Optimization/Side Chain Idealization:
+protocols.backrub.BackrubProtocol: 
+------------------------------------------------------------
+ Scores                       Weight   Raw Score Wghtd.Score
+------------------------------------------------------------
+ fa_atr                       1.000   -1178.704   -1178.704
+ fa_rep                       0.550     222.094     122.151
+ fa_sol                       0.938     699.256     655.553
+ fa_intra_rep                 0.005     579.041       2.895
+ mm_bend                      1.000     166.917     166.917
+ fa_elec                      0.875     -98.181     -85.908
+ pro_close                    1.250       1.841       2.301
+ hbond_sr_bb                  1.170     -23.851     -27.906
+ hbond_lr_bb                  1.170     -60.995     -71.364
+ hbond_bb_sc                  1.170     -25.255     -29.549
+ hbond_sc                     1.100      -5.314      -5.846
+ dslf_fa13                    1.250      -7.631      -9.538
+ rama                         0.250     -96.739     -24.185
+ omega                        0.625      36.701      22.938
+ fa_dun                       0.700     448.872     314.211
+ p_aa_pp                      0.400    -142.752     -57.101
+ yhh_planarity                0.625       2.472       1.545
+ ref                          1.000      -1.119      -1.119
+---------------------------------------------------
+ Total weighted score:                     -202.709
+core.pack.task: Packer task: initialize from command line() 
+core.pack.task.operation.TaskOperations: Enabling extrachi cutoff at all positions
+protocols.backrub.BackrubProtocol: Running 10000 trials...
+protocols.backrub.BackrubProtocol: Applying mover 'ParsedProtocol' on step 10000
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER PackRotamersMover - mutate=======================
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 8890 rotamers at 273 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating PDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 22137204 bytes
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER PackRotamersMover - repack=======================
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 0 rotamers at 0 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+core.pack.interaction_graph.interaction_graph_factory: IG: 480 bytes
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER AddConstraintsToCurrentConformationMover - addcst=======================
+protocols.constraint_movers.AddConstraintsToCurrentConformationMover: Using harmonic function
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER MinMover - minimize=======================
+protocols.minimization_packing.MinMover: running another iteration of minimization. difference is: 187.692
+protocols.minimization_packing.MinMover: running another iteration of minimization. difference is: 2.02839
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER ClearConstraintsMover - clearcst=======================
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER ReportToDB - structreport=======================
+protocols.features.ReportToDB: Reporting features for 273 of the 273 total residues in the pose wt_19_10000_0001 for batch 'structreport'.
+protocols.features.util: Requesting data on 'structreport' from the DATABASE_PROTOCOL_AND_BATCH_ID_TAG message listener on head node.
+protocols.features.util: Received protocol_id='0' and batch_id='0'
+protocols.features.ProtocolFeatures: No protocol ID, generating one automagically
+protocols.features.BatchFeatures: No batch ID, generating one automagically
+protocols.features.util: protocol_id '2' and batch_id '2', for batch 'structreport' have been written to the database. Now sending info back to head node.
+basic.mpi.DbMoverMessageListener: Received this message from slave: 2 structreport 2
+basic.mpi.DbMoverMessageListener: Setting batch id identifier to: 'structreport'
+protocols.features.util: Done with protocol and batch id generation.
+protocols.features.ReportToDB: Reporting PoseConformationFeatures
+protocols.features.ReportToDB: Reporting PdbDataFeatures
+protocols.features.ReportToDB: Reporting JobDataFeatures
+protocols.features.ReportToDB: Reporting ResidueFeatures
+protocols.features.ReportToDB: Reporting PoseCommentsFeatures
+protocols.features.ReportToDB: Reporting ProteinResidueConformationFeatures
+protocols.features.ReportToDB: Reporting ResidueConformationFeatures
+protocols.rosetta_scripts.ParsedProtocol: =======================BEGIN MOVER InterfaceDdGMover - int_ddG_mover=======================
+protocols.features.InterfaceDdGMover: Translating/unbinding chain ID(s): 2 
+protocols.moves.RigidBodyMover: Translate: Jump (before): RT 0.712579 0.218416 -0.666728 -0.382146 0.917797 -0.107761 0.588384 0.331575 0.73747 9.96893 18.6607 -28.999  
+protocols.moves.RigidBodyMover: Translate: Jump (after):  RT 0.712579 0.218416 -0.666728 -0.382146 0.917797 -0.107761 0.588384 0.331575 0.73747 843.312 -303.804 419.952  
+protocols.features.InterfaceDdGMover: Translating/unbinding chain ID(s): 2 
+protocols.moves.RigidBodyMover: Translate: Jump (before): RT 0.712579 0.218416 -0.666728 -0.382146 0.917797 -0.107761 0.588384 0.331575 0.73747 9.96893 18.6607 -28.999  
+protocols.moves.RigidBodyMover: Translate: Jump (after):  RT 0.712579 0.218416 -0.666728 -0.382146 0.917797 -0.107761 0.588384 0.331575 0.73747 843.312 -303.804 419.952  
+protocols.features.InterfaceDdGMover: Mutations between stored wildtype and mutant poses:
+ResNum WTResiType MutResiType
+   129     LYS        GLN   
+
+protocols.features.InterfaceDdGMover: interface binding energy ddG score (after mutation(s)): 0.917563
+protocols.features.ReportToDB: Reporting features for 273 of the 273 total residues in the pose wt_19_10000_0001 for batch 'bound_wt_dbreport'.
+protocols.features.util: Requesting data on 'bound_wt_dbreport' from the DATABASE_PROTOCOL_AND_BATCH_ID_TAG message listener on head node.
+protocols.features.util: Received protocol_id='2' and batch_id='0'
+protocols.features.BatchFeatures: No batch ID, generating one automagically
+protocols.features.util: protocol_id '2' and batch_id '1', for batch 'bound_wt_dbreport' have been written to the database. Now sending info back to head node.
+basic.mpi.DbMoverMessageListener: Received this message from slave: 2 bound_wt_dbreport 1
+basic.mpi.DbMoverMessageListener: Setting batch id identifier to: 'bound_wt_dbreport'
+protocols.features.util: Done with protocol and batch id generation.
+protocols.features.ReportToDB: Reporting ScoreTypeFeatures
+protocols.features.ReportToDB: Reporting ScoreFunctionFeatures
+protocols.features.ReportToDB: Reporting StructureScoresFeatures
+protocols.features.ReportToDB: Reporting features for 273 of the 273 total residues in the pose wt_19_10000_0001 for batch 'unbound_wt_dbreport'.
+protocols.features.util: Requesting data on 'unbound_wt_dbreport' from the DATABASE_PROTOCOL_AND_BATCH_ID_TAG message listener on head node.
+protocols.features.util: Received protocol_id='2' and batch_id='0'
+protocols.features.BatchFeatures: No batch ID, generating one automagically
+protocols.features.util: protocol_id '2' and batch_id '2', for batch 'unbound_wt_dbreport' have been written to the database. Now sending info back to head node.
+basic.mpi.DbMoverMessageListener: Received this message from slave: 2 unbound_wt_dbreport 2
+basic.mpi.DbMoverMessageListener: Setting batch id identifier to: 'unbound_wt_dbreport'
+protocols.features.util: Done with protocol and batch id generation.
+protocols.features.ReportToDB: Reporting ScoreTypeFeatures
+protocols.features.ReportToDB: Reporting ScoreFunctionFeatures
+protocols.features.ReportToDB: Reporting StructureScoresFeatures
+protocols.features.ReportToDB: Reporting features for 273 of the 273 total residues in the pose wt_19_10000_0001 for batch 'bound_mut_dbreport'.
+protocols.features.util: Requesting data on 'bound_mut_dbreport' from the DATABASE_PROTOCOL_AND_BATCH_ID_TAG message listener on head node.
+protocols.features.util: Received protocol_id='2' and batch_id='0'
+protocols.features.BatchFeatures: No batch ID, generating one automagically
+protocols.features.util: protocol_id '2' and batch_id '3', for batch 'bound_mut_dbreport' have been written to the database. Now sending info back to head node.
+basic.mpi.DbMoverMessageListener: Received this message from slave: 2 bound_mut_dbreport 3
+basic.mpi.DbMoverMessageListener: Setting batch id identifier to: 'bound_mut_dbreport'
+protocols.features.util: Done with protocol and batch id generation.
+protocols.features.ReportToDB: Reporting ScoreTypeFeatures
+protocols.features.ReportToDB: Reporting ScoreFunctionFeatures
+protocols.features.ReportToDB: Reporting StructureScoresFeatures
+protocols.features.ReportToDB: Reporting features for 273 of the 273 total residues in the pose wt_19_10000_0001 for batch 'unbound_mut_dbreport'.
+protocols.features.util: Requesting data on 'unbound_mut_dbreport' from the DATABASE_PROTOCOL_AND_BATCH_ID_TAG message listener on head node.
+protocols.features.util: Received protocol_id='2' and batch_id='0'
+protocols.features.BatchFeatures: No batch ID, generating one automagically
+protocols.features.util: protocol_id '2' and batch_id '4', for batch 'unbound_mut_dbreport' have been written to the database. Now sending info back to head node.
+basic.mpi.DbMoverMessageListener: Received this message from slave: 2 unbound_mut_dbreport 4
+basic.mpi.DbMoverMessageListener: Setting batch id identifier to: 'unbound_mut_dbreport'
+protocols.features.util: Done with protocol and batch id generation.
+protocols.features.ReportToDB: Reporting ScoreTypeFeatures
+protocols.features.ReportToDB: Reporting ScoreFunctionFeatures
+protocols.features.ReportToDB: Reporting StructureScoresFeatures
+protocols.rosetta_scripts.ParsedProtocol: setting status to success
+protocols.moves.TrialCounter:      br_CA_CA_04 trials=    740;  accepts= 0.4243;  energy_drop/trial=   0.04949
+protocols.moves.TrialCounter:      br_CA_CA_07 trials=    737;  accepts= 0.3962;  energy_drop/trial=   0.04428
+protocols.moves.TrialCounter:      br_CA_CA_10 trials=    707;  accepts= 0.3182;  energy_drop/trial=   0.04208
+protocols.moves.TrialCounter:      br_CA_CA_13 trials=    665;  accepts= 0.3023;  energy_drop/trial=   0.03867
+protocols.moves.TrialCounter:      br_CA_CA_16 trials=    677;  accepts= 0.2910;  energy_drop/trial=   0.00166
+protocols.moves.TrialCounter:      br_CA_CA_19 trials=    672;  accepts= 0.2545;  energy_drop/trial=   0.00334
+protocols.moves.TrialCounter:      br_CA_CA_22 trials=    641;  accepts= 0.2465;  energy_drop/trial=   0.02195
+protocols.moves.TrialCounter:      br_CA_CA_25 trials=    666;  accepts= 0.2252;  energy_drop/trial=  -0.00585
+protocols.moves.TrialCounter:      br_CA_CA_28 trials=    662;  accepts= 0.2024;  energy_drop/trial=   0.02267
+protocols.moves.TrialCounter:      br_CA_CA_31 trials=    656;  accepts= 0.1692;  energy_drop/trial=   0.01027
+protocols.moves.TrialCounter:      br_CA_CA_34 trials=    677;  accepts= 0.1935;  energy_drop/trial=   0.01344
+protocols.moves.TrialCounter:       sc_chi_rot trials=   2214;  accepts= 0.3505;  energy_drop/trial=   0.04271
+protocols.moves.TrialCounter:      sc_chi_unif trials=    286;  accepts= 0.0350;  energy_drop/trial=   0.01610
+protocols.backrub.BackrubProtocol: Last Score:
+protocols.backrub.BackrubProtocol: 
+------------------------------------------------------------
+ Scores                       Weight   Raw Score Wghtd.Score
+------------------------------------------------------------
+ fa_atr                       1.000   -1136.432   -1136.432
+ fa_rep                       0.550     400.627     220.345
+ fa_sol                       0.938     686.324     643.429
+ fa_intra_rep                 0.005     569.593       2.848
+ mm_bend                      1.000     147.019     147.019
+ fa_elec                      0.875     -74.173     -64.902
+ pro_close                    1.250       1.841       2.301
+ hbond_sr_bb                  1.170     -15.006     -17.557
+ hbond_lr_bb                  1.170     -47.639     -55.738
+ hbond_bb_sc                  1.170     -15.202     -17.787
+ hbond_sc                     1.100      -3.048      -3.353
+ dslf_fa13                    1.250       1.991       2.489
+ rama                         0.250     -49.612     -12.403
+ omega                        0.625      36.701      22.938
+ fa_dun                       0.700     540.212     378.148
+ p_aa_pp                      0.400    -118.360     -47.344
+ yhh_planarity                0.625       4.302       2.689
+ ref                          1.000      -1.119      -1.119
+---------------------------------------------------
+ Total weighted score:                       65.571
+protocols.backrub.BackrubProtocol: Low Score:
+protocols.backrub.BackrubProtocol: 
+------------------------------------------------------------
+ Scores                       Weight   Raw Score Wghtd.Score
+------------------------------------------------------------
+ fa_atr                       1.000   -1178.704   -1178.704
+ fa_rep                       0.550     222.094     122.151
+ fa_sol                       0.938     699.256     655.553
+ fa_intra_rep                 0.005     579.041       2.895
+ mm_bend                      1.000     166.917     166.917
+ fa_elec                      0.875     -98.181     -85.908
+ pro_close                    1.250       1.841       2.301
+ hbond_sr_bb                  1.170     -23.851     -27.906
+ hbond_lr_bb                  1.170     -60.995     -71.364
+ hbond_bb_sc                  1.170     -25.255     -29.549
+ hbond_sc                     1.100      -5.314      -5.846
+ dslf_fa13                    1.250      -7.631      -9.538
+ rama                         0.250     -96.739     -24.185
+ omega                        0.625      36.701      22.938
+ fa_dun                       0.700     448.872     314.211
+ p_aa_pp                      0.400    -142.752     -57.101
+ yhh_planarity                0.625       2.472       1.545
+ ref                          1.000      -1.119      -1.119
+---------------------------------------------------
+ Total weighted score:                     -202.709
+protocols.backrub.BackrubProtocol: Leaving pose as last sampled model
+protocols.rosetta_scripts.ParsedProtocol: setting status to success
+protocols.jd2.JobDistributor: wt_19_10000_0001 reported success in 601 seconds
+protocols.jd2.JobDistributor: no more batches to process... 
+protocols.jd2.JobDistributor: 1 jobs considered, 1 jobs attempted in 601 seconds

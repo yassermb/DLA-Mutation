@@ -39,9 +39,11 @@ logging.basicConfig(filename='manager.log', filemode='w', format='%(levelname)s:
 mainlog = logging.getLogger('main')
 logging.Logger
 
-map_dir_mut = 'map_dir_mut'
-map_dir_mut_sep = 'map_dir_mut_sep'
-inter_dir_mut = 'inter_dir_mut'
+mut_directory = '../Examples/backrub_directory'
+
+map_dir_mut = '../Examples/map_dir_mut'
+map_dir_mut_sep = '../Examples/map_dir_mut_sep'
+inter_dir_mut = '../Examples/inter_dir_mut'
 
 bin_path = "./maps_generator"
 
@@ -151,7 +153,6 @@ def mapcomplex(wt_pdb, mut_pdb, protein_complex, mutate_complex, ddg, model_ind,
     except Exception as e:
         logging.error("Bad interface!" + '\ninter_rec: ' +  wt_pdb + '\ninter_lig: ' + mut_pdb + '\nError message: ' + str(e) + 
                       "\nMore information:\n" + traceback.format_exc())
-        print('XXXXXXXXXXXXXXexceptionXXXXXXXXXx')
         return
     
     return
@@ -208,7 +209,6 @@ def manage_mut_files(use_multiprocessing):
         mkdir(map_dir_mut_sep)
     if not path.exists(inter_dir_mut):
         mkdir(inter_dir_mut)
-    mut_directory = 'backrub_models_directory'
     muts = listdir(mut_directory)
     mut_cases = []
     for mut in muts:

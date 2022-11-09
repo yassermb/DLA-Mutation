@@ -38,33 +38,25 @@ def load_obj(name):
         return pickle.load(f)
 
 def load_map(filename):
-    #system('copy ' + filename + ' file.pkl.lz4')
-    #shutil.copyfile(filename, 'file.pkl.lz4')
-    """
     check_call(
         [
-            'lz4_win64_v1_9_3\lz4.exe', '-d', '-f',
-            'file.pkl.lz4'
+            'lz4', '-d', '-f',
+            filename
         ],
         stdout=sys.stdout)
-    """
-    #X_wt, X_mut, y, scr, _, _ = load_obj('file')
-    X_wt, X_mut, y, scr, _, _ = load_obj(filename.replace('.pkl',''))
-    
+    X_wt, X_mut, y, scr, _, _ = load_obj(filename.replace('.pkl.lz4',''))
     
     X_wt = X_wt[:,:,:,:,:167]
     X_mut = X_mut[:,:,:,:,:167]
     
-    
-    #remove('file.pkl')
-    #remove('file.pkl.lz4')
+    remove(filename.replace('.lz4',''))
     return X_wt, X_mut, y, scr
 
-path_training = '../finetune_mapping_scr_gemme_jet/'
+gemme_jet_dict = load_obj('./comp_mut_map_gemme_jet')
 
-gemme_jet_dict = load_obj(path.join(path_training, '../comp_mut_map_gemme_jet'))
+model_s = load_model(path.join('../Models','DLA_Mutation_model'))
 
-backrub_models = list(map(lambda x: x.strip(), open('../split/test_interfaces.txt', 'r').readlines()))
+backrub_models = glob.glob(path.join('../Examples', 'map_dir_mut'))
 backrub_models_test = []
 for br_model in backrub_models:
     comp = path.basename(br_model)[:4]
@@ -74,8 +66,6 @@ for br_model in backrub_models:
 
 encoder = OneHotEncoder(sparse=False, handle_unknown='ignore')
 onehot = encoder.fit(np.asarray([['SUP'], ['COR'], ['RIM'], ['SUR'], ['INT']]))
-
-model_s = load_model(path.join(path_training,'model_s_50'))
 
 test_preds = []
 for backrub_model in backrub_models_test:
