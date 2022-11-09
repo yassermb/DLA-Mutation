@@ -39,13 +39,15 @@ DLA-Ranker can be run on Linux, MacOS, and Windows. We recommend to use DLA-Rank
 
 All-in-one: Run conda create --name dla --file dla.yml
 
-## Representation learning with self-supervised Deep Local Analysis (ssDLA)
+## Tutorial
+
+### Representation learning with self-supervised Deep Local Analysis (ssDLA)
 ssDLA is a structure-based general purpose model to generate informative representations from the local environments (masked or not-masked) around interfacial residues for downstream tasks.
 
-### Finding residue-specific patterns
+#### Finding residue-specific patterns
 Here we evaluate the pre-trained ssDLA models to predict the type of amino acid from the masked cube.
 
-#### Generating masked locally oriented cubes
+##### Generating masked locally oriented cubes
 - Place the protein complexes in a directory (*e.g. 'Examples/complex_directory'*) like below. The 'complex_list.txt' is a csv file that contains three columns separated by ';': Name of target complex (`Comp`); receptor chain ID(s) (`ch1`), ligand chain ID(s) (`ch2`). 
 
 ```
@@ -89,7 +91,7 @@ Each output represents interface of a complex and contains a set of local enviro
 An atomic density map is a 4 dimensional tensor: a voxelized 3D grid with a size of ```24*24*24```. Each voxel encodes some characteristics of the protein atoms. Namely, the first 167 dimensions correspond to the
 atom types that can be found in amino acids (without the hydrogen). This dimension can be reduced to 4 element symbols (C,N,O,S) by running ```python generate_cubes_reduce_channels_multiproc.py``` (ATTENTION: This code overwrites the existing files).
 
-#### Predicting the type of masked residue
+##### Predicting the type of masked residue
 
 From directory 'Evaluation' run ```python test_xray.py``` or ```python test_xray_4channels.py``` depending on the number of channels.
 
@@ -115,9 +117,9 @@ Each row of the embedding file also belongs to an interfacial residue. Beside th
 
 Similar analysis can be performed on backrub models by running ```python test_backrub.py``` or ```python test_backrub_4channels.py``` depending on the number of channels. 
 
-## Downstream tasks
+### Downstream tasks
 
-### Predicting mutation-induced changes of binding affinity
+#### Predicting mutation-induced changes of binding affinity
 
 - Place the wild-type and mutant complex backrub models in a directory (*e.g. 'Examples/backrub_directory'*) like below.
 
@@ -142,14 +144,14 @@ Example
 
 - From ```Test``` run ```python test_ddg.py```. The output contains the values of predicted and experimental values of $\Delta\Delta$G.
 
-### Predicting the physico-chemical class of interfacial residues
+#### Predicting the physico-chemical class of interfacial residues
 
 - Specify the non masking in ```Representation/generate_cubes_interface.py```.
 - From ```Representation``` run ```python generate_cubes_interface.py```.
 - From ```Evaluation``` run ```python test_xray.py``` or ```python test_xray_4channels.py``` (depending on the number of channels) to extract the embeddings.
 - From ```Evaluation``` run ```python transfer_learning_aa_reducedalphabet.py``` or ```python transfer_learning_aa_reducedalphabet_xray.py``` to train a small neural network.
 
-### Predicting the function of the protein complex
+#### Predicting the function of the protein complex
 
 - Specify the non masking in ```Representation/generate_cubes_interface.py```.
 - From ```Representation``` run ```python generate_cubes_interface.py```.
