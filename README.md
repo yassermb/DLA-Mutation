@@ -117,9 +117,8 @@ Each row of the embedding file also belongs to an interfacial residue. Beside th
 
 Similar analysis can be performed on backrub models by running ```python test_backrub.py``` or ```python test_backrub_4channels.py``` depending on the number of channels. 
 
-### Downstream tasks
 
-#### Predicting mutation-induced changes of binding affinity
+### Predicting mutation-induced changes of binding affinity
 
 - Place the wild-type and mutant complex backrub models in a directory (*e.g. 'Examples/backrub_directory'*) like below.
 
@@ -143,6 +142,8 @@ Example
 - From ```Representation``` run ```python generate_cubes_ddg.py```. It extracts cubic volumetric maps around the mutation positions from both wild-type and mutant complexes.
 
 - From ```Test``` run ```python test_ddg.py```. The output contains the values of predicted and experimental values of $\Delta\Delta$G.
+
+### Downstream tasks
 
 #### Predicting the physico-chemical class of interfacial residues
 
