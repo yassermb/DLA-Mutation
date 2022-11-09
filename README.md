@@ -141,7 +141,7 @@ Example
 
 - From ```Representation``` run ```python generate_cubes_ddg.py```. It extracts cubic volumetric maps around the mutation positions from both wild-type and mutant complexes.
 
-- From ```Test``` run ```python test_ddg.py```. The output contains the values of predicted and experimental values of $\Delta\Delta$G.
+- From ```Test``` run ```python test_ddg.py```. The output contains the values of predicted and experimental values of &Delta;&Delta;G.
 
 ### Downstream tasks
 
