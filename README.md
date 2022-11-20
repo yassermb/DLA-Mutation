@@ -62,10 +62,10 @@ Example
 
 - Specify the path to FreeSASA or NACCESS in ```lib/tools.py``` (```FREESASA_PATH``` or ```NACCESS_PATH```). The choice between FreeSASA or NACCESS can be specified in ```lib/tools.py``` (default is ```USE_FREESASA = True```).
 - If you have 'Nvidia GPU' on your computer, or execute on 'Google Colab', set ```FORCE_CPU = False``` in ```lib/tools.py```. Otherwise set ```FORCE_CPU = True``` (default is ```FORCE_CPU=False```).
-- Specify the type of masking in ```Representation/python generate_cubes_interface.py```. You have the following options:
-    - Masking a sphere of radius 5A randomly centered on an atom of the central residue. This is the default masking. The ssDLA model is trained by this masking procedure.
+- Specify the type of masking in ```Representation/generate_cubes_interface.py```. You have the following options:
+    - Masking a sphere of radius 5A randomly centered on an atom of the central residue. This is the default masking. The ssDLA model is trained by this masking option.
     - Masking a sphere of radius 3A randomly centered on an atom of the central residue. 
-    - Masking only the side-chain the central residue.
+    - Masking only the side-chain of the central residue.
     - Masking the whole central residue. 
     - No masking at all. 
     
