@@ -93,7 +93,7 @@ atom types that can be found in amino acids (without the hydrogen). This dimensi
 
 From directory 'Evaluation' run ```python test_xray.py``` or ```python test_xray_4channels.py``` depending on the number of channels.
 
-It processes all the target complexes and produces csv files 'output_xray_wt_mask' ('output_xray_wt_mask_4channels') as the output and 'intermediate_xray_wt_mask_200' ('intermediate_xray_wt_mask_200_4channels') as the embedding vectors. Each row of the output file belongs to an interfacial residue of a target complex and it has 10 columns separated by 'tab':
+It processes all the target complexes and produces csv files 'output_xray_wt_mask' ('output_xray_wt_mask_4channels') as the output and 'intermediate_xray_wt_mask_200' ('intermediate_xray_wt_mask_200_4channels') as the embedding vectors. Each row of the output file belongs to an interfacial residue of a target complex and has 10 columns separated by 'tab':
 
 Name of the complex (`complex`) <br>
 Residue name (`resname`) <br>
@@ -101,12 +101,12 @@ Structural region of the residue (`resregion`) <br>
 Residue number (`resnumber`; according to PDB) <br>
 Residue coordinate position (`respos`) <br>
 Receptor or ligand (`partner`) <br>
-The prediction vector of size 20 (`prediction`) <br>
+The predicted vector of size 20 (`prediction`) <br>
 The one-hot encoding of the target residue (`target`) <br>
-Entropy of the prediction vector (`entropy`) <br>
-Cross-entropy between the prediction vector and target vector (`crossentropy`) <br>
+Entropy of the predicted vector (`entropy`) <br>
+Cross-entropy between the predicted and target vectors (`crossentropy`) <br>
 
-Each row of the embedding file also belongs to an interfacial residue. Beside the information mentioned above, it has the feature vectors of size 200 extracted from each cube.
+Each row of the embedding file also belongs to an interfacial residue. Beside the information mentioned above, it has the feature vectors of size 200 extracted from each cube. This files serves as input for the downstream tasks (transfer learning with frozen weights).
 
 
 <p align="center">
