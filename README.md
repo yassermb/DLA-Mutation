@@ -8,19 +8,17 @@
 ## Overview
 ![](Images/method_mutation.svg.png?raw=true "DLA")
 
-Deep Local Analysis (DLA)-Mutation, contrasts the patterns observed in two small cubes encapsulating the physico-chemical and geometrical environments around the wild-type and the mutant amino acids. The underlying self-supervised model (ssDLA) takes advantage of a large-scale exploration of non-redundant available experimental protein complex structures in the Protein Data Bank (PDB) to learn the fundamental properties of protein-protein interfaces. Using evolutionary constraints and conformational heterogeneity improves the performance of DLA-Mutation.
+Deep Local Analysis (DLA)-Mutation, contrasts the patterns observed in two local cubes encapsulating the physico-chemical and geometrical environments around the wild-type and the mutant amino acids. The underlying self-supervised model (ssDLA) takes advantage of a large-scale exploration of non-redundant experimental protein complex structures in the Protein Data Bank (PDB) to learn the fundamental properties of protein-protein interfaces. The evolutionary constraints and conformational heterogeneity improves the performance of DLA-Mutation.
 
 #### Features:
 
-- Useful APIs for fast estimation of changes in binding affinity due to single-point mutations based on a local comparison of atomic patterns found in pairs of cubes around a wild-type residue and its mutant. Beyond the predictive power on the effects of mutations, DLA is a general framework for transferring the knowledge gained from the available non-redundant set of complex protein structures to various tasks. For instance, given a single partially masked cube, it recovers the identity and physico-chemical class of the central residue. Given an ensemble of cubes representing an interface, it predicts the function of the complex. 
+- Prediction of the changes of binding affinity upon single-point mutation using Siamese architecture.
 
-- Prediction of the changes of binding affinity based on Siamese architecture.
-
-- Transfer the knowledge of protein-protein interfaces.
+- Transfer the knowledge of protein-protein interfaces to various down stream tasks. For instance, given a single partially masked cube, it recovers the identity and physico-chemical class of the central residue. Given an ensemble of cubes representing an interface, it predicts the function of the complex. 
 
 - Using structural and evolutionary information.
 
-- Fast generation of cubes and evaluation of interface.
+- Fast generation of cubes and evaluation of interfaces.
 
 - Training and testing 3D-CNN models.
 
