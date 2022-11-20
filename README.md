@@ -43,7 +43,7 @@ All-in-one: Run conda create --name dla --file dla.yml
 ssDLA is a structure-based general purpose model to generate informative representations from the local environments (masked or not-masked) around interfacial residues for downstream tasks.
 
 #### Finding residue-specific patterns
-Here we evaluate the pre-trained ssDLA models to predict the type of amino acid from the masked cube.
+We can use the pre-trained ssDLA model to predict the type of amino acid given a masked cube.
 
 ##### Generating masked locally oriented cubes
 - Place the protein complexes in a directory (*e.g. 'Examples/complex_directory'*) like below. The 'complex_list.txt' is a csv file that contains three columns separated by ';': Name of target complex (`Comp`); receptor chain ID(s) (`ch1`), ligand chain ID(s) (`ch2`). 
