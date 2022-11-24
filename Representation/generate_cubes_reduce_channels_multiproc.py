@@ -84,7 +84,7 @@ for i,a in enumerate(all_channels):
     if a[0] == "S":
         S_index.append(i)
         
-samples= glob.glob(path.join('../Examples/map_dir','*','*','*.lz4'))
+samples= glob.glob(path.join('../Examples/map_dir','*','*.lz4'))
 
 
 def process_sample(sample, report_dict):

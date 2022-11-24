@@ -123,7 +123,7 @@ def load_map(sample_test):
     #return X, y, y_ddg
     return X, y, y_ddg, region, comp_type, expr_method
         
-samples = glob.glob(path.join(map_dir,'*','1','*'))
+samples = glob.glob(path.join(map_dir,'*','*'))
 
 
 output_handler = open(output_file, 'w')

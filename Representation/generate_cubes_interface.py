@@ -163,14 +163,9 @@ def process_targetcomplex(targetcomplex, comp_dir, report_dict):
         if targetcomplex in already_exist:
             return
         logging.info('Processing ' + targetcomplex + ' ...')
-        pos_path = path.join(map_dir, targetcomplex, '1')
-        neg_path = path.join(map_dir, targetcomplex, '0')
+
         if not path.exists(path.join(map_dir, targetcomplex)):
             mkdir(path.join(map_dir, targetcomplex))
-        if not path.exists(pos_path):
-            mkdir(pos_path)    
-        if not path.exists(neg_path):
-            mkdir(neg_path)
 
         ch1, ch2 =  comp_dict.loc[comp_dict.Comp == targetcomplex][['ch1','ch2']].iloc[0]
         
@@ -184,7 +179,7 @@ def process_targetcomplex(targetcomplex, comp_dir, report_dict):
 def manage_pair_files(use_multiprocessing):
     tc_cases = []
     for tc in target_comp:
-        tc_cases.append((tc, comp_dir))
+        tc_cases.append((tc.replace('.pdb',''), comp_dir))
     report_dict = tl.do_processing(tc_cases, process_targetcomplex, use_multiprocessing)
     return report_dict
 

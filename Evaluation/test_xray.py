@@ -117,7 +117,7 @@ def load_map(sample_test):
     remove(sample_test.replace('.lz4',''))
     return X, y, reg_type, res_pos, res_name, inter_info
         
-samples = glob.glob(path.join(map_dir,'*','1','*'))
+samples = glob.glob(path.join(map_dir,'*','*'))
 
 
 output_handler = open(output_file, 'w')
