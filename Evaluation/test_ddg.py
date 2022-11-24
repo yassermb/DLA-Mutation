@@ -56,7 +56,7 @@ gemme_jet_dict = load_obj('./comp_mut_map_gemme_jet')
 
 model_s = load_model(path.join('../Models','DLA_Mutation_model'))
 
-backrub_models = glob.glob(path.join('../Examples', 'map_dir_mut'))
+backrub_models = glob.glob(path.join('../Examples', 'map_dir_mut', '*', '*'))
 backrub_models_test = []
 for br_model in backrub_models:
     comp = path.basename(br_model)[:4]
