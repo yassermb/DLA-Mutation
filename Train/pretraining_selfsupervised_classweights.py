@@ -254,9 +254,6 @@ def get_cluster_id(clusters, p1,p2):
 #Class weights
 ####################################################################
 d_class_weights=load_obj('class_weights')
-d_class_weights[14] = 0.8
-d_class_weights[7] = 0.7
-d_class_weights[10] = 0.58
 ####################################################################
 
 for foldk in range(5):
